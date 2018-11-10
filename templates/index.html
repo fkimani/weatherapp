@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title> Weather Data</title>
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">	
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+	</head>
+
+	<body>
+	<div class="clear"></div>
+	<div id = "uptop"><div id="tophdg"><h1 class="hdg">Enter US zip code to get weather information</h1></div></div>
+		<div id = "input">
+		
+		<form method="POST" action="/weather">
+					<!--Zip Code input:--> <input type="text" name="zip" placeholder="Zip Code" id="zip_input" maxlength="5">
+			<input type="submit" id="submit_btn" onClick="runner()">
+		</form>
+		</div>
+	<link type="text/javascript" href="{{ url_for('static', filename='js/script.js') }}">
+	</body>
+</html>

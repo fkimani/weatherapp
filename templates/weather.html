@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>{{zipc}} - {{city}} Weather {{time}}</title>
+		<meta content="{{city}} weather {{time}}" name="title" />
+		<meta content="weather {{city}}, {{city}} weather, {{city}} climate, temperature {{city}}, current weather {{city}} " name="keywords" />
+		<meta content="Current {{city}} weather data, {{country}}. Temperature, wind, local time" name="description" />
+			<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"/>	
+			<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+			<link type="text/javascript" href="{{ url_for('static', filename='js/script.js') }}">
+	</head>
+<body>
+<!--if a valid zip has been passed in, render the weather data-->
+	{% if zipc %}
+<div id = "results">
+
+<h2>{{zipc}} - Current Weather Data </h2>
+
+
+	<div id = "weatherdata">
+	Conditions: {{icon_desc}} <img src="{{icon_url}}"/> 
+	<p>Temperature: {{temp}} &deg;F</p>
+	<p>Temp Min: {{temp_min}} &deg;F</p>
+	<p>Temp Max: {{temp_max}} &deg;F</p>
+	<p>Local time: {{time}} hrs</p>
+	<p>City: {{city}} </p>
+	<p>Zip: {{zipc}} </p>
+	<p>Country: {{country}} </p>
+	<p>Wind Direction: {{wind_dir}}</p>
+	<p>Atmospheric Pressure: {{pressure}} hPa</p>
+	<p>Humidity: {{ humidity}} %</p>
+	<p>City Lattitude: {{city_lat}}</p>
+	<p>City Longitude: {{city_lon}}</p>
+	<p>City Sunrise: {{city_sunrise}} hrs</p>
+	<p>City Sunset: {{city_sunset}} hrs</p>
+	<p>Request info on another zip code <a href="/">Click here</a>.</p>
+	<!--for unit testing/debugging, show response. remove after tests-->
+	<!--<p>Response: {{json_response}}</p>-->
+
+<!--if a valid zip has NOT been passed in, DONT render the weather data. Direct user back to index page-->
+	{% else %}
+	<script>
+		window.location.href='/';	
+	</script>
+
+	{% endif %}
+	
+	</div> <!--/weatherdata-->
+</div> <!--/results-->
+</body>
+</html>

@@ -1,0 +1,80 @@
+div.clear{width:100%;height: 20px;}
+.hdg{ color:black;}
+div#tophdg {
+    width: 670px;
+    margin: 0 auto;
+    color: #ffffff;
+    height: 100px;
+}
+div#tophdg.h1 {
+    color: white;
+}
+div#scrappy {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+#input {
+    top: 200px;
+    padding: 10px 20px 10px 40px;
+    background-color: #32878a;
+    margin: 0 auto;
+    width: 430px;
+    position: absolute;
+    right: 392px;
+    height: 119px;
+    border: 1px solid gray;
+}
+img.owl {
+    /*opacity: 0.3;*/
+	width:100%;
+}
+div#tophdg {
+    width: 670px;
+    margin: 0 auto;
+    height: 100px;
+}
+div#uptop {
+    /*background: cadetblue;*/
+    color: white;
+	/*    color: #32878a*/;
+    height: 150px;
+}
+#mapping
+{
+   position: absolute;
+   top: 311px;
+   right: 550px;
+   height: 209px;
+   width: 325px;
+   background-color: blue;   
+}
+body
+{
+   background-color: white;
+}
+#weather
+{
+     width: 600px;
+     top: 0px;
+     right: 100px;  
+}
+#results
+{
+      background-color: white;
+}
+
+#map {
+    width: 50%;
+    /*height: 400px;*/
+	height:560px;	
+    float: left;
+	border: solid 1px black;
+}
+#weatherdata {
+    width: 45%;
+    height: 400px;
+    float: left;
+    padding-left: 20px;
+}
