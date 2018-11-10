@@ -17,7 +17,7 @@ def weather():
 			error = 'invalid entry. Need numeric.'
 	zipcode = validatezip()
 	#zipcode = request.form['zip'] use line 18 0or 19 and not both for validation. if using js to validate input, use 19. if using py, SS, 18
-	user_apiid = '5cb00286a7cf3a8f11164ed76bcaf93e' #replace with your user_apiid. Im using my user_apiid
+	user_apiid = 'zz5cb00286a7cf3a8f11164ed76bcaf93e' #replace with your user_apiid. Im using my user_apiid
 	url = "https://api.openweathermap.org/data/2.5/weather?zip={},us&units=imperial&APPID={}".format(zipcode,user_apiid)
 	r = requests.get(url)	#the request will make the call to OpenWeather API 
 	json_object = r.json() #r.text()--this will jasonify the API response data
